@@ -88,16 +88,8 @@ public class Main extends JFrame {
 			}
 		});
 		btnProdutos.setIcon(new ImageIcon(Main.class.getResource("/img/order.png")));
-		btnProdutos.setBounds(10, 82, 164, 57);
+		btnProdutos.setBounds(10, 150, 164, 57);
 		panel.add(btnProdutos);
-		
-		JButton btnVendas = new JButton("Vendas");
-		btnVendas.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnVendas.setBackground(new Color(0, 191, 255));
-		btnVendas.setForeground(new Color(240, 248, 255));
-		btnVendas.setIcon(new ImageIcon(Main.class.getResource("/img/sales.png")));
-		btnVendas.setBounds(10, 150, 164, 57);
-		panel.add(btnVendas);
 		
 		JButton btnPdv = new JButton("PDV");
 		btnPdv.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -153,6 +145,20 @@ public class Main extends JFrame {
 		btnSair.setBackground(new Color(0, 191, 255));
 		btnSair.setBounds(10, 354, 164, 57);
 		panel.add(btnSair);
+		
+		JButton btnVendas = new JButton("Fornecedores");
+		btnVendas.setBounds(10, 82, 164, 57);
+		panel.add(btnVendas);
+		btnVendas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frmFornecedor fornecedor = new frmFornecedor();
+				fornecedor.setVisible(true);
+			}
+		});
+		btnVendas.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnVendas.setBackground(new Color(0, 191, 255));
+		btnVendas.setForeground(new Color(240, 248, 255));
+		btnVendas.setIcon(new ImageIcon(Main.class.getResource("/img/sales.png")));
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(new Color(169, 169, 169));
